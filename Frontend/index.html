@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="left">
+        <h1 id="company">HCL Fly Ways</h1>
+        <img src="aeroplane.png" id="logo" alt="">
+    </div>
+
+    <div id="right">
+        <center>
+            <div id="loginbox">
+                <img src="user.png" alt="" id="dp">
+                <form action="index.html" class="box">
+                    <input type="text" name="Username" id="uname" placeholder="Username"> <br>
+                    <input type="password" name="pswd" id="pswd" placeholder="Password"> <br>
+                    <!-- <p id="para">Hi</p> -->
+                    <!-- <button onclick="myFun()">Emtered vamlut</button> <br>
+                    <button onclick="window.print()">Primt</button> -->
+                    <input type="submit" id="submit" onclick="validate()" value="Submit"> <br>
+                </form>
+            </div>
+        </center>
+    </div>
+    
+    <script>
+        // function myFun() {
+        //     var txt = "Hello sir welcome to HCL!"
+        //     document.getElementById("para").innerHTML = "Hemlo world";
+        //     alert(6+5);
+        // }
+        var uname = document.getElementById("uname").value;
+        var password = document.getElementById("pswd").value;
+        console.log("This is username and password: " + uname);
+        // document.getElementById("submit").addEventListener("click", function logine(){
+        //     if (uname == "ved" && pswd == "admin"){
+        //         console.log("Login successful");
+        //     } else {
+        //         console.log("Login failed");
+        //     }
+        // } );
+                    
+        function validate(){                
+            console.log("hemlo");
+            if (uname == "ved" && pswd == "ved"){
+                alert("Login successful");
+            } else {
+                alert("Login failed");
+            }
+        }
+    </script>
+
+</body>
+</html>
