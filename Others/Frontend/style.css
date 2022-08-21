@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
+html{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(bg.jpeg);
+    background-color: rgb(58, 50, 98);
+    font-family: 'Kirang Haerang', cursive;
+}
+
+#para{
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    color: white;
+    background-color: grey;
+}
+
+#company {
+    color: rgb(16, 15, 58);
+    /* color: white; */
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Kirang Haerang', cursive;
+}
+
+#logo {
+    height: 300px;
+    width: auto;
+    text-align: center;
+    margin-left: 100px;
+    /* transform: rotate(-20deg); */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#dp {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    margin-top: -70px;
+}
+
+#loginbox input[type="text"], #loginbox input[type="password"] {
+    transition: .3s;
+    border: none;
+    outline: none;
+    width: auto;
+    height: 20px;
+    margin: 10px;
+    padding: 6px;
+    border-radius: 120px;
+    text-align: center;
+    
+    color: rgb(255, 255, 255) !important;
+    background-color:rgb(34, 20, 92);
+}
+
+#loginbox input[type="submit"] {
+    transition: .2s;
+    border: 3px solid rgba(72, 23, 185, 0.763);
+    outline: none;
+    height: 30px;
+    border-radius: 20px;
+    padding: 3px 20px;
+    /* color: white !important; */
+}
+
+#loginbox input[type="submit"]:hover {
+    padding: 3px 40px;
+    color: white !important;
+    background-color: rgba(72, 23, 185, 0.763);
+}
+
+
+#loginbox input[type="text"]:focus, #loginbox input[type="password"]:focus {
+    border: 3px solid rgba(11, 114, 187, 0.978);
+}
+
+#left {
+    float: left;
+    margin: 0;
+    width: 60%;
+    /* height: auto; */
+    /* backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    background-color: rgba(255, 246, 246, 0.133); */
+}
+#right {
+    float: right;
+    margin: 0;
+    width: 40%;
+    height: 700px;
+    /* background-color: blue; */
+    
+}
+
+#loginbox {
+    /* background-color: rgb(67, 44, 160); */
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    height: auto;
+    margin-top: 150px;
+
+    align-items: center;
+    text-align: center;
+    /* align-self: center; */
+    /* justify-content: center; */
+    /* justify-items: center; */
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 381, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 30px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
