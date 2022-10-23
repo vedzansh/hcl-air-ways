@@ -114,6 +114,7 @@ public class MainPage extends Thread {
             System.out.println("----------WELCOME TO HCL AIRLINE----------");
             System.out.println("ENTER 1 FOR FLIGHT TICKET BOOKING");
             System.out.println("ENTER 2 FOR TICKET CANCELLATION");
+            System.out.println("ENTER 3 FOR ALL FLIGHT DETAIL");
 
             int ch = sc.nextInt();
             if (ch == 1) {
@@ -300,7 +301,26 @@ public class MainPage extends Thread {
                     System.out.println("");
                     useagain();
                 }
-            } else {
+            } else if (ch == 3) {
+                System.out.println("--ALL FLIGHTS DETAIL");
+                String j = "select*from flight";
+                Statement stmt1 = conn.createStatement();
+                ResultSet rs = stmt1.executeQuery(j);
+                while (rs.next()) {
+                    System.out.print("Flight code : " + rs.getString(1));
+                    System.out.print(", Flight name : " + rs.getString(2));
+                    System.out.print(", Source loction : " + rs.getString(3));
+                    System.out.print(", Destination : " + rs.getString(4));
+                    System.out.print(", time : " + rs.getString(5));
+                    System.out.print(", Charge " + rs.getString(6));
+                    System.out.print(", Class" + rs.getString(7));
+                    System.out.println("");
+                    useagain();
+
+                }
+            }
+
+            else {
                 System.out.println("INVALID CHOICE");
                 useagain();
 
@@ -337,7 +357,7 @@ public class MainPage extends Thread {
         System.out.println("ENTER 3 FOR VIEW ALL FLIGHT");
         System.out.println("ENTER 4 FOR VIEW ALL CENCELLED TICKET");
         System.out.println("ENTER 5 FOR FLIGHT RESCHEDULE");
-        System.out.println("ENTER 6 FOR PASSENGER DATAIL");
+        
         System.out.println("");
         int ch4 = sc4.nextInt();
         if (ch4 == 1) {
@@ -351,7 +371,7 @@ public class MainPage extends Thread {
 
             System.out.println("-------ENTER FLIGHT DETAIL-------");
             System.out.println("ENTER FLIGHT CODE");
-            Scanner sc5=new Scanner(System.in);
+            Scanner sc5 = new Scanner(System.in);
             f_code = sc5.nextLine();
             System.out.println("ENTER FLIGHT NAME");
             f_name = sc5.nextLine();
@@ -380,7 +400,7 @@ public class MainPage extends Thread {
             System.out.println("status");
             useagain();
         } else if (ch4 == 2) {
-            Scanner sc6=new Scanner(System.in);
+            Scanner sc6 = new Scanner(System.in);
             Connection conn1 = DBConnection.getConnection();
             System.out.println("ENTER FLIGHT CODE PLEASE");
             String f_code = sc6.nextLine();
@@ -423,7 +443,7 @@ public class MainPage extends Thread {
             }
             useagain();
         } else if (ch4 == 5) {
-            Scanner sc7=new Scanner(System.in);
+            Scanner sc7 = new Scanner(System.in);
             System.out.println("ENTER FLIGHT CODE :");
             String code = sc7.nextLine();
             System.out.println("ENTER NEW TIME : ");
@@ -434,7 +454,7 @@ public class MainPage extends Thread {
             ca.setString(2, time);
             ca.registerOutParameter(3, Types.VARCHAR);
             ca.executeUpdate();
-            String status=ca.getString(3);
+            String status = ca.getString(3);
             System.out.println(status);
 
         } else {
